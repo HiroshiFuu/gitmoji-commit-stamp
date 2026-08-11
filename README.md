@@ -21,11 +21,6 @@ RADAR-5678 fix🐛: login page styles
 - `gitmojiCommitStamp.ticketPrefix`: ticket number prefix used in branch matching. Default: `RADAR`
 - `gitmojiCommitStamp.ticketPattern`: regex to extract the ticket number from the branch name; the first capture group becomes the prefix, and `${prefix}` is replaced with the value of `ticketPrefix`. Default: `^[^/]+/(${prefix}-\d+)`
 
-## Development / Packaging
-
-- Debug: open this folder in VS Code and press `F5` to launch the Extension Development Host
-- Package: `npm i -g @vscode/vsce`, then run `vsce package` in this folder to produce a `.vsix`, and install it via "Extensions: Install from VSIX..."
-
 ## Credits
 
 Default commit types are based on [gitmoji](https://gitmoji.dev/) by [Carlos Cuesta](https://github.com/carloscuesta/gitmoji), licensed under MIT.

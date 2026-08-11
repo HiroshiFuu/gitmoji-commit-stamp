@@ -367,7 +367,7 @@
             },
             {
               "emoji": "🚩",
-              "type": "flags",
+              "type": "flag",
               "description": "Add, update, or remove feature flags."
             },
             {
@@ -377,7 +377,7 @@
             },
             {
               "emoji": "💫",
-              "type": "feat",
+              "type": "ui",
               "description": "Add or update animations and transitions."
             },
             {
@@ -397,7 +397,7 @@
             },
             {
               "emoji": "🧐",
-              "type": "chore",
+              "type": "data",
               "description": "Data exploration/inspection."
             },
             {
@@ -432,7 +432,7 @@
             },
             {
               "emoji": "💸",
-              "type": "chore",
+              "type": "sponsor",
               "description": "Add sponsorships or money related infrastructure."
             },
             {
