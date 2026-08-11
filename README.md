@@ -4,20 +4,20 @@ Adds a `🏷` icon to the Source Control title bar. Clicking it shows a list of 
 
 ## Features
 
-- Customizable commit type list (emoji + type + description), defaults based on [gitmoji](https://gitmoji.dev/)
+- Customizable commit type list (emoji + type + description); default emojis and descriptions come from [gitmoji](https://gitmoji.dev/), with types mapped to [Conventional Commits](https://www.conventionalcommits.org/) / Angular convention (`feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`)
 - Writes a `<type><emoji>: ` prefix into the commit message box
 - If the current branch matches `<type>/<ticketPrefix>-<digits>` (e.g. `feat/RADAR-1234` with the default `RADAR` prefix), automatically prepends `RADAR-1234 `
-- If the message box already has a `RADAR-xxxx ` or `<type><emoji>?:` prefix, it is replaced with the newly selected type instead of stacking up
+- If the message box already has a `RADAR-xxxx `, `<type><emoji>:`, `<type>:` (e.g. `fix:`), or `<emoji>:` prefix, it is replaced with the newly selected type instead of stacking up
 
-Example: on branch `fix/RADAR-5678` with `sparkles✨: login page styles` in the box, selecting `bug` produces:
+Example: on branch `fix/RADAR-5678` with `feat: login page styles` in the box, selecting `🐛 fix` produces:
 
 ```
-RADAR-5678 bug🐛: login page styles
+RADAR-5678 fix🐛: login page styles
 ```
 
 ## Settings
 
-- `gitmojiCommitStamp.customType`: commit type list; each item has `emoji`, `type`, `name` (optional `description`)
+- `gitmojiCommitStamp.customType`: commit type list; each item has `emoji`, `type` (written into the prefix), and `description`
 - `gitmojiCommitStamp.ticketPrefix`: ticket number prefix used in branch matching. Default: `RADAR`
 - `gitmojiCommitStamp.ticketPattern`: regex to extract the ticket number from the branch name; the first capture group becomes the prefix, and `${prefix}` is replaced with the value of `ticketPrefix`. Default: `^[^/]+/(${prefix}-\d+)`
 

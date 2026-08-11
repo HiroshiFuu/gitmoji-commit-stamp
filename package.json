@@ -59,22 +59,19 @@
       "properties": {
         "gitmojiCommitStamp.customType": {
           "type": "array",
-          "markdownDescription": "Custom commit type list. Each item has `emoji`, `type`, `name` (optional `description`).",
+          "markdownDescription": "Custom commit type list. Each item has `emoji`, `type` (written into the message prefix), and `description`.",
           "items": {
             "type": "object",
             "required": [
               "emoji",
               "type",
-              "name"
+              "description"
             ],
             "properties": {
               "emoji": {
                 "type": "string"
               },
               "type": {
-                "type": "string"
-              },
-              "name": {
                 "type": "string"
               },
               "description": {
@@ -85,378 +82,378 @@
           "default": [
             {
               "emoji": "✨",
-              "type": "sparkles",
-              "name": "Introduce new features."
+              "type": "feat",
+              "description": "Introduce new features."
             },
             {
               "emoji": "🐛",
-              "type": "bug",
-              "name": "Fix a bug."
+              "type": "fix",
+              "description": "Fix a bug."
             },
             {
               "emoji": "✅",
-              "type": "white-check-mark",
-              "name": "Add, update, or pass tests."
+              "type": "test",
+              "description": "Add, update, or pass tests."
             },
             {
               "emoji": "📝",
-              "type": "memo",
-              "name": "Add or update documentation."
-            },
-            {
-              "emoji": "🎨",
-              "type": "art",
-              "name": "Improve structure / format of the code."
-            },
-            {
-              "emoji": "⚡️",
-              "type": "zap",
-              "name": "Improve performance."
-            },
-            {
-              "emoji": "🔥",
-              "type": "fire",
-              "name": "Remove code or files."
-            },
-            {
-              "emoji": "🚑️",
-              "type": "ambulance",
-              "name": "Critical hotfix."
-            },
-            {
-              "emoji": "🚀",
-              "type": "rocket",
-              "name": "Deploy stuff."
-            },
-            {
-              "emoji": "💄",
-              "type": "lipstick",
-              "name": "Add or update the UI and style files."
-            },
-            {
-              "emoji": "🎉",
-              "type": "tada",
-              "name": "Begin a project."
-            },
-            {
-              "emoji": "🔒️",
-              "type": "lock",
-              "name": "Fix security or privacy issues."
-            },
-            {
-              "emoji": "🔐",
-              "type": "closed-lock-with-key",
-              "name": "Add or update secrets."
-            },
-            {
-              "emoji": "🔖",
-              "type": "bookmark",
-              "name": "Release / Version tags."
-            },
-            {
-              "emoji": "🚨",
-              "type": "rotating-light",
-              "name": "Fix compiler / linter warnings."
-            },
-            {
-              "emoji": "🚧",
-              "type": "construction",
-              "name": "Work in progress."
-            },
-            {
-              "emoji": "💚",
-              "type": "green-heart",
-              "name": "Fix CI Build."
-            },
-            {
-              "emoji": "⬇️",
-              "type": "arrow-down",
-              "name": "Downgrade dependencies."
-            },
-            {
-              "emoji": "⬆️",
-              "type": "arrow-up",
-              "name": "Upgrade dependencies."
-            },
-            {
-              "emoji": "📌",
-              "type": "pushpin",
-              "name": "Pin dependencies to specific versions."
-            },
-            {
-              "emoji": "👷",
-              "type": "construction-worker",
-              "name": "Add or update CI build system."
-            },
-            {
-              "emoji": "📈",
-              "type": "chart-with-upwards-trend",
-              "name": "Add or update analytics or track code."
+              "type": "docs",
+              "description": "Add or update documentation."
             },
             {
               "emoji": "♻️",
-              "type": "recycle",
-              "name": "Refactor code."
+              "type": "refactor",
+              "description": "Refactor code."
+            },
+            {
+              "emoji": "🎨",
+              "type": "style",
+              "description": "Improve structure / format of the code."
+            },
+            {
+              "emoji": "⚡️",
+              "type": "perf",
+              "description": "Improve performance."
+            },
+            {
+              "emoji": "🔥",
+              "type": "refactor",
+              "description": "Remove code or files."
+            },
+            {
+              "emoji": "🚑️",
+              "type": "fix",
+              "description": "Critical hotfix."
+            },
+            {
+              "emoji": "🚀",
+              "type": "chore",
+              "description": "Deploy stuff."
+            },
+            {
+              "emoji": "💄",
+              "type": "style",
+              "description": "Add or update the UI and style files."
+            },
+            {
+              "emoji": "🎉",
+              "type": "chore",
+              "description": "Begin a project."
+            },
+            {
+              "emoji": "🔒️",
+              "type": "fix",
+              "description": "Fix security or privacy issues."
+            },
+            {
+              "emoji": "🔐",
+              "type": "chore",
+              "description": "Add or update secrets."
+            },
+            {
+              "emoji": "🔖",
+              "type": "chore",
+              "description": "Release / Version tags."
+            },
+            {
+              "emoji": "🚨",
+              "type": "style",
+              "description": "Fix compiler / linter warnings."
+            },
+            {
+              "emoji": "🚧",
+              "type": "chore",
+              "description": "Work in progress."
+            },
+            {
+              "emoji": "💚",
+              "type": "ci",
+              "description": "Fix CI Build."
+            },
+            {
+              "emoji": "⬇️",
+              "type": "build",
+              "description": "Downgrade dependencies."
+            },
+            {
+              "emoji": "⬆️",
+              "type": "build",
+              "description": "Upgrade dependencies."
+            },
+            {
+              "emoji": "📌",
+              "type": "build",
+              "description": "Pin dependencies to specific versions."
+            },
+            {
+              "emoji": "👷",
+              "type": "ci",
+              "description": "Add or update CI build system."
+            },
+            {
+              "emoji": "📈",
+              "type": "feat",
+              "description": "Add or update analytics or track code."
             },
             {
               "emoji": "➕",
-              "type": "heavy-plus-sign",
-              "name": "Add a dependency."
+              "type": "build",
+              "description": "Add a dependency."
             },
             {
               "emoji": "➖",
-              "type": "heavy-minus-sign",
-              "name": "Remove a dependency."
+              "type": "build",
+              "description": "Remove a dependency."
             },
             {
               "emoji": "🔧",
-              "type": "wrench",
-              "name": "Add or update configuration files."
+              "type": "chore",
+              "description": "Add or update configuration files."
             },
             {
               "emoji": "🔨",
-              "type": "hammer",
-              "name": "Add or update development scripts."
+              "type": "chore",
+              "description": "Add or update development scripts."
             },
             {
               "emoji": "🌐",
-              "type": "globe-with-meridians",
-              "name": "Internationalization and localization."
+              "type": "feat",
+              "description": "Internationalization and localization."
             },
             {
               "emoji": "✏️",
-              "type": "pencil2",
-              "name": "Fix typos."
+              "type": "fix",
+              "description": "Fix typos."
             },
             {
               "emoji": "💩",
-              "type": "poop",
-              "name": "Write bad code that needs to be improved."
+              "type": "chore",
+              "description": "Write bad code that needs to be improved."
             },
             {
               "emoji": "⏪️",
-              "type": "rewind",
-              "name": "Revert changes."
+              "type": "revert",
+              "description": "Revert changes."
             },
             {
               "emoji": "🔀",
-              "type": "twisted-rightwards-arrows",
-              "name": "Merge branches."
+              "type": "chore",
+              "description": "Merge branches."
             },
             {
               "emoji": "📦️",
-              "type": "package",
-              "name": "Add or update compiled files or packages."
+              "type": "build",
+              "description": "Add or update compiled files or packages."
             },
             {
               "emoji": "👽️",
-              "type": "alien",
-              "name": "Update code due to external API changes."
+              "type": "fix",
+              "description": "Update code due to external API changes."
             },
             {
               "emoji": "🚚",
-              "type": "truck",
-              "name": "Move or rename resources (e.g.: files, paths, routes)."
+              "type": "refactor",
+              "description": "Move or rename resources (e.g.: files, paths, routes)."
             },
             {
               "emoji": "📄",
-              "type": "page-facing-up",
-              "name": "Add or update license."
+              "type": "chore",
+              "description": "Add or update license."
             },
             {
               "emoji": "💥",
-              "type": "boom",
-              "name": "Introduce breaking changes."
+              "type": "feat",
+              "description": "Introduce breaking changes."
             },
             {
               "emoji": "🍱",
-              "type": "bento",
-              "name": "Add or update assets."
+              "type": "chore",
+              "description": "Add or update assets."
             },
             {
               "emoji": "♿️",
-              "type": "wheelchair",
-              "name": "Improve accessibility."
+              "type": "feat",
+              "description": "Improve accessibility."
             },
             {
               "emoji": "💡",
-              "type": "bulb",
-              "name": "Add or update comments in source code."
+              "type": "docs",
+              "description": "Add or update comments in source code."
             },
             {
               "emoji": "🍻",
-              "type": "beers",
-              "name": "Write code drunkenly."
+              "type": "chore",
+              "description": "Write code drunkenly."
             },
             {
               "emoji": "💬",
-              "type": "speech-balloon",
-              "name": "Add or update text and literals."
+              "type": "chore",
+              "description": "Add or update text and literals."
             },
             {
               "emoji": "🗃️",
-              "type": "card-file-box",
-              "name": "Perform database related changes."
+              "type": "chore",
+              "description": "Perform database related changes."
             },
             {
               "emoji": "🔊",
-              "type": "loud-sound",
-              "name": "Add or update logs."
+              "type": "chore",
+              "description": "Add or update logs."
             },
             {
               "emoji": "🔇",
-              "type": "mute",
-              "name": "Remove logs."
+              "type": "chore",
+              "description": "Remove logs."
             },
             {
               "emoji": "👥",
-              "type": "busts-in-silhouette",
-              "name": "Add or update contributor(s)."
+              "type": "docs",
+              "description": "Add or update contributor(s)."
             },
             {
               "emoji": "🚸",
-              "type": "children-crossing",
-              "name": "Improve user experience / usability."
+              "type": "feat",
+              "description": "Improve user experience / usability."
             },
             {
               "emoji": "🏗️",
-              "type": "building-construction",
-              "name": "Make architectural changes."
+              "type": "refactor",
+              "description": "Make architectural changes."
             },
             {
               "emoji": "📱",
-              "type": "iphone",
-              "name": "Work on responsive design."
+              "type": "feat",
+              "description": "Work on responsive design."
             },
             {
               "emoji": "🤡",
-              "type": "clown-face",
-              "name": "Mock things."
+              "type": "test",
+              "description": "Mock things."
             },
             {
               "emoji": "🥚",
-              "type": "egg",
-              "name": "Add or update an easter egg."
+              "type": "feat",
+              "description": "Add or update an easter egg."
             },
             {
               "emoji": "🙈",
-              "type": "see-no-evil",
-              "name": "Add or update a .gitignore file."
+              "type": "chore",
+              "description": "Add or update a .gitignore file."
             },
             {
               "emoji": "📸",
-              "type": "camera-flash",
-              "name": "Add or update snapshots."
+              "type": "test",
+              "description": "Add or update snapshots."
             },
             {
               "emoji": "⚗️",
-              "type": "alembic",
-              "name": "Perform experiments."
+              "type": "chore",
+              "description": "Perform experiments."
             },
             {
               "emoji": "🔍️",
-              "type": "mag",
-              "name": "Improve SEO."
+              "type": "feat",
+              "description": "Improve SEO."
             },
             {
               "emoji": "🏷️",
-              "type": "label",
-              "name": "Add or update types."
+              "type": "refactor",
+              "description": "Add or update types."
             },
             {
               "emoji": "🌱",
-              "type": "seedling",
-              "name": "Add or update seed files."
+              "type": "chore",
+              "description": "Add or update seed files."
             },
             {
               "emoji": "🚩",
-              "type": "triangular-flag-on-post",
-              "name": "Add, update, or remove feature flags."
+              "type": "feat",
+              "description": "Add, update, or remove feature flags."
             },
             {
               "emoji": "🥅",
-              "type": "goal-net",
-              "name": "Catch errors."
+              "type": "fix",
+              "description": "Catch errors."
             },
             {
               "emoji": "💫",
-              "type": "dizzy",
-              "name": "Add or update animations and transitions."
+              "type": "feat",
+              "description": "Add or update animations and transitions."
             },
             {
               "emoji": "🗑️",
-              "type": "wastebasket",
-              "name": "Deprecate code that needs to be cleaned up."
+              "type": "refactor",
+              "description": "Deprecate code that needs to be cleaned up."
             },
             {
               "emoji": "🛂",
-              "type": "passport-control",
-              "name": "Work on code related to authorization, roles and permissions."
+              "type": "feat",
+              "description": "Work on code related to authorization, roles and permissions."
             },
             {
               "emoji": "🩹",
-              "type": "adhesive-bandage",
-              "name": "Simple fix for a non-critical issue."
+              "type": "fix",
+              "description": "Simple fix for a non-critical issue."
             },
             {
               "emoji": "🧐",
-              "type": "monocle-face",
-              "name": "Data exploration/inspection."
+              "type": "chore",
+              "description": "Data exploration/inspection."
             },
             {
               "emoji": "⚰️",
-              "type": "coffin",
-              "name": "Remove dead code."
+              "type": "refactor",
+              "description": "Remove dead code."
             },
             {
               "emoji": "🧪",
-              "type": "test-tube",
-              "name": "Add a failing test."
+              "type": "test",
+              "description": "Add a failing test."
             },
             {
               "emoji": "👔",
-              "type": "necktie",
-              "name": "Add or update business logic."
+              "type": "feat",
+              "description": "Add or update business logic."
             },
             {
               "emoji": "🩺",
-              "type": "stethoscope",
-              "name": "Add or update healthcheck."
+              "type": "feat",
+              "description": "Add or update healthcheck."
             },
             {
               "emoji": "🧱",
-              "type": "bricks",
-              "name": "Infrastructure related changes."
+              "type": "chore",
+              "description": "Infrastructure related changes."
             },
             {
               "emoji": "🧑‍💻",
-              "type": "technologist",
-              "name": "Improve developer experience."
+              "type": "chore",
+              "description": "Improve developer experience."
             },
             {
               "emoji": "💸",
-              "type": "money-with-wings",
-              "name": "Add sponsorships or money related infrastructure."
+              "type": "chore",
+              "description": "Add sponsorships or money related infrastructure."
             },
             {
               "emoji": "🧵",
-              "type": "thread",
-              "name": "Add or update code related to multithreading or concurrency."
+              "type": "feat",
+              "description": "Add or update code related to multithreading or concurrency."
             },
             {
               "emoji": "🦺",
-              "type": "safety-vest",
-              "name": "Add or update code related to validation."
+              "type": "feat",
+              "description": "Add or update code related to validation."
             },
             {
               "emoji": "✈️",
-              "type": "airplane",
-              "name": "Improve offline support."
+              "type": "feat",
+              "description": "Improve offline support."
             },
             {
               "emoji": "🦖",
-              "type": "t-rex",
-              "name": "Code that adds backwards compatibility."
+              "type": "fix",
+              "description": "Code that adds backwards compatibility."
             }
           ]
         },

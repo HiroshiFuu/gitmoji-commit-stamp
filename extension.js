@@ -59,8 +59,7 @@ async function selectType() {
   const picked = await vscode.window.showQuickPick(
     types.map((t) => ({
       label: `${t.emoji} ${t.type}`,
-      description: t.name,
-      detail: t.description,
+      description: t.description,
       commitType: t,
     })),
     { placeHolder: 'Select a commit type', matchOnDescription: true }
@@ -71,7 +70,6 @@ async function selectType() {
     repo.inputBox.value || '',
     repo.state.HEAD?.name || '',
     picked.commitType,
-    types,
     config.get('ticketPattern'),
     config.get('ticketPrefix')
   );
@@ -88,10 +86,11 @@ const EMOJI_RE_SRC =
  * Build the new commit message:
  * 1. If the branch name matches ticketPattern (default <type>/<ticketPrefix>-<digits>),
  *    prefix the message with "<ticketPrefix>-<digits> "
- * 2. If the current message already starts with "<ticket> " or "<type><emoji>?:",
- *    strip the old prefix and replace it with the selected type
+ * 2. If the current message already starts with "<ticket> ", "<emoji>:",
+ *    "<type>:", or "<type><emoji>:", strip the old prefix and replace it
+ *    with the selected type and emoji
  */
-function buildMessage(current, branch, selected, types, ticketPattern, ticketPrefix) {
+function buildMessage(current, branch, selected, ticketPattern, ticketPrefix) {
   let ticket = '';
   if (ticketPattern) {
     const resolved = ticketPattern.replace(
@@ -115,14 +114,13 @@ function buildMessage(current, branch, selected, types, ticketPattern, ticketPre
     rest = rest.slice(ticketMatch[0].length);
   }
 
-  // Strip an existing "<type><emoji>?:" prefix (emoji optional,
-  // full-width colon supported)
-  const typeNames = types.map((t) => escapeRegExp(t.type)).join('|');
-  const typeRe = new RegExp(
-    `^(?:${typeNames})\\s*(?:${EMOJI_RE_SRC})?\\s*[:：]\\s*`,
+  // Strip an existing prefix: "<type><emoji>:", a bare type word like "fix:",
+  // or a bare "<emoji>:"; full-width colon supported
+  const prefixRe = new RegExp(
+    `^(?:[\\w-]+\\s*(?:${EMOJI_RE_SRC})?|${EMOJI_RE_SRC})\\s*[:：]\\s*`,
     'u'
   );
-  rest = rest.replace(typeRe, '');
+  rest = rest.replace(prefixRe, '');
 
   const prefix = ticket ? `${ticket} ` : '';
   return `${prefix}${selected.type}${selected.emoji}: ${rest}`;
