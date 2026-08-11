@@ -306,6 +306,11 @@
               "description": "Remove logs."
             },
             {
+              "emoji": "📜",
+              "type": "changelog",
+              "description": "Update changelog."
+            },
+            {
               "emoji": "👥",
               "type": "docs",
               "description": "Add or update contributor(s)."

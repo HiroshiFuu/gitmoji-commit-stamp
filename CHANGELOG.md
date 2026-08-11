@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.0.2
+
+- Fix: a bare type prefix without emoji (e.g. `fix: something`) is now replaced when picking a new type, instead of getting a second prefix stacked in front
+- Rename the `name` field of `gitmojiCommitStamp.customType` items to `description`
+- Map default commit types to [Conventional Commits](https://www.conventionalcommits.org/) / Angular convention types (`feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`)
+- Replace strictly conventional default types with more expressive ones where the emoji has a sharper meaning: `hotfix` (🚑️), `init` (🎉), `deploy` (🚀), `release` (🔖), `deps` (⬆️⬇️📌➕➖), `security` (🔒️🔐), `wip` (🚧), `merge` (🔀), `config` (🔧), `i18n` (🌐), `typo` (✏️), and more
+
 ## 0.0.1
 
 Initial release.
