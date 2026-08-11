@@ -122,37 +122,37 @@
             },
             {
               "emoji": "🚑️",
-              "type": "fix",
+              "type": "hotfix",
               "description": "Critical hotfix."
             },
             {
               "emoji": "🚀",
-              "type": "chore",
+              "type": "deploy",
               "description": "Deploy stuff."
             },
             {
               "emoji": "💄",
-              "type": "style",
+              "type": "ui",
               "description": "Add or update the UI and style files."
             },
             {
               "emoji": "🎉",
-              "type": "chore",
+              "type": "init",
               "description": "Begin a project."
             },
             {
               "emoji": "🔒️",
-              "type": "fix",
+              "type": "security",
               "description": "Fix security or privacy issues."
             },
             {
               "emoji": "🔐",
-              "type": "chore",
+              "type": "security",
               "description": "Add or update secrets."
             },
             {
               "emoji": "🔖",
-              "type": "chore",
+              "type": "release",
               "description": "Release / Version tags."
             },
             {
@@ -162,7 +162,7 @@
             },
             {
               "emoji": "🚧",
-              "type": "chore",
+              "type": "wip",
               "description": "Work in progress."
             },
             {
@@ -172,17 +172,17 @@
             },
             {
               "emoji": "⬇️",
-              "type": "build",
+              "type": "deps",
               "description": "Downgrade dependencies."
             },
             {
               "emoji": "⬆️",
-              "type": "build",
+              "type": "deps",
               "description": "Upgrade dependencies."
             },
             {
               "emoji": "📌",
-              "type": "build",
+              "type": "deps",
               "description": "Pin dependencies to specific versions."
             },
             {
@@ -197,17 +197,17 @@
             },
             {
               "emoji": "➕",
-              "type": "build",
+              "type": "deps",
               "description": "Add a dependency."
             },
             {
               "emoji": "➖",
-              "type": "build",
+              "type": "deps",
               "description": "Remove a dependency."
             },
             {
               "emoji": "🔧",
-              "type": "chore",
+              "type": "config",
               "description": "Add or update configuration files."
             },
             {
@@ -217,12 +217,12 @@
             },
             {
               "emoji": "🌐",
-              "type": "feat",
+              "type": "i18n",
               "description": "Internationalization and localization."
             },
             {
               "emoji": "✏️",
-              "type": "fix",
+              "type": "typo",
               "description": "Fix typos."
             },
             {
@@ -237,7 +237,7 @@
             },
             {
               "emoji": "🔀",
-              "type": "chore",
+              "type": "merge",
               "description": "Merge branches."
             },
             {
@@ -257,17 +257,17 @@
             },
             {
               "emoji": "📄",
-              "type": "chore",
+              "type": "license",
               "description": "Add or update license."
             },
             {
               "emoji": "💥",
-              "type": "feat",
+              "type": "breaking",
               "description": "Introduce breaking changes."
             },
             {
               "emoji": "🍱",
-              "type": "chore",
+              "type": "assets",
               "description": "Add or update assets."
             },
             {
@@ -292,17 +292,17 @@
             },
             {
               "emoji": "🗃️",
-              "type": "chore",
+              "type": "db",
               "description": "Perform database related changes."
             },
             {
               "emoji": "🔊",
-              "type": "chore",
+              "type": "logs",
               "description": "Add or update logs."
             },
             {
               "emoji": "🔇",
-              "type": "chore",
+              "type": "logs",
               "description": "Remove logs."
             },
             {
@@ -327,7 +327,7 @@
             },
             {
               "emoji": "🤡",
-              "type": "test",
+              "type": "mock",
               "description": "Mock things."
             },
             {
@@ -337,7 +337,7 @@
             },
             {
               "emoji": "🙈",
-              "type": "chore",
+              "type": "git",
               "description": "Add or update a .gitignore file."
             },
             {
@@ -347,27 +347,27 @@
             },
             {
               "emoji": "⚗️",
-              "type": "chore",
+              "type": "experiment",
               "description": "Perform experiments."
             },
             {
               "emoji": "🔍️",
-              "type": "feat",
+              "type": "seo",
               "description": "Improve SEO."
             },
             {
               "emoji": "🏷️",
-              "type": "refactor",
+              "type": "types",
               "description": "Add or update types."
             },
             {
               "emoji": "🌱",
-              "type": "chore",
+              "type": "seed",
               "description": "Add or update seed files."
             },
             {
               "emoji": "🚩",
-              "type": "feat",
+              "type": "flags",
               "description": "Add, update, or remove feature flags."
             },
             {
@@ -387,7 +387,7 @@
             },
             {
               "emoji": "🛂",
-              "type": "feat",
+              "type": "auth",
               "description": "Work on code related to authorization, roles and permissions."
             },
             {
@@ -422,12 +422,12 @@
             },
             {
               "emoji": "🧱",
-              "type": "chore",
+              "type": "infra",
               "description": "Infrastructure related changes."
             },
             {
               "emoji": "🧑‍💻",
-              "type": "chore",
+              "type": "dx",
               "description": "Improve developer experience."
             },
             {
