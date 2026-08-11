@@ -157,7 +157,7 @@
             },
             {
               "emoji": "🚨",
-              "type": "style",
+              "type": "fix",
               "description": "Fix compiler / linter warnings."
             },
             {
@@ -282,12 +282,12 @@
             },
             {
               "emoji": "🍻",
-              "type": "chore",
+              "type": "refactor",
               "description": "Write code drunkenly."
             },
             {
               "emoji": "💬",
-              "type": "chore",
+              "type": "refactor",
               "description": "Add or update text and literals."
             },
             {
@@ -308,7 +308,7 @@
             {
               "emoji": "📜",
               "type": "changelog",
-              "description": "Update changelog."
+              "description": "Add or update changelog."
             },
             {
               "emoji": "👥",
@@ -347,7 +347,7 @@
             },
             {
               "emoji": "📸",
-              "type": "test",
+              "type": "chore",
               "description": "Add or update snapshots."
             },
             {
@@ -362,7 +362,7 @@
             },
             {
               "emoji": "🏷️",
-              "type": "types",
+              "type": "type",
               "description": "Add or update types."
             },
             {
@@ -382,7 +382,7 @@
             },
             {
               "emoji": "💫",
-              "type": "ui",
+              "type": "feat",
               "description": "Add or update animations and transitions."
             },
             {
