@@ -1,6 +1,6 @@
 # Gitmoji Commit Stamp
 
-Adds a `🏷` icon to the Source Control title bar. Clicking it shows a list of gitmoji commit types; picking one stamps a `<ticket> <type><emoji>: ` prefix onto the commit message.
+Adds a 🏷️ tag icon to the Source Control title bar. Clicking it shows a list of gitmoji commit types; picking one stamps a `<ticket> <type><emoji>: ` prefix onto the commit message.
 
 ## Features
 
