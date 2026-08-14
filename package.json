@@ -40,7 +40,7 @@
     "commands": [
       {
         "command": "gitmojiCommitStamp.selectType",
-        "title": "Select Commit Type",
+        "title": "Stamp Commit Message",
         "category": "Gitmoji Commit Stamp",
         "icon": "$(tag)"
       }
@@ -49,7 +49,7 @@
       "scm/title": [
         {
           "command": "gitmojiCommitStamp.selectType",
-          "group": "navigation",
+          "group": "navigation@1",
           "when": "scmProvider == git"
         }
       ]
