@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.1.0
+
+- Recognize scoped Conventional Commits prefixes like `feat(extension):` / `fix(bug)🐛:` and replace them with the newly selected type
+
 ## 0.0.2
 
 - Fix: a bare type prefix without emoji (e.g. `fix: something`) is now replaced when picking a new type, instead of getting a second prefix stacked in front

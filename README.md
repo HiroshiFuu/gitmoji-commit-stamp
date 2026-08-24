@@ -7,7 +7,7 @@ Adds a 🏷️ tag icon to the Source Control title bar. Clicking it shows a lis
 - Customizable commit type list (emoji + type + description); default emojis and descriptions come from [gitmoji](https://gitmoji.dev/), with types based on [Conventional Commits](https://www.conventionalcommits.org/) (`feat`, `fix`, `docs`, `refactor`, `test`, `chore`, ...) plus expressive extras where the emoji has a sharper meaning (`hotfix`, `init`, `deploy`, `release`, `deps`, `security`, `i18n`, ...)
 - Writes a `<type><emoji>: ` prefix into the commit message box
 - If the current branch matches `<type>/<ticketPrefix>-<digits>` (e.g. `feat/RADAR-1234` with the default `RADAR` prefix), automatically prepends `RADAR-1234 `
-- If the message box already has a `RADAR-xxxx `, `<type><emoji>:`, `<type>:` (e.g. `fix:`), or `<emoji>:` prefix, it is replaced with the newly selected type instead of stacking up
+- If the message box already has a `RADAR-xxxx `, `<type><emoji>:`, `<type>:` (e.g. `fix:`), `<type>(<scope>):` (e.g. `feat(extension):`), or `<emoji>:` prefix, it is replaced with the newly selected type instead of stacking up
 
 Example: on branch `fix/RADAR-5678` with `feat: login page styles` in the box, selecting `🐛 fix` produces:
 

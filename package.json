@@ -107,7 +107,7 @@
             },
             {
               "emoji": "🎨",
-              "type": "style",
+              "type": "format",
               "description": "Improve structure / format of the code."
             },
             {
