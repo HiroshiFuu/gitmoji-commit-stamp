@@ -2,7 +2,7 @@
   "name": "gitmoji-commit-stamp",
   "displayName": "Gitmoji Commit Stamp",
   "description": "Pick a gitmoji commit type in Source Control and stamp a prefix with emoji and branch ticket number onto the commit message",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "hiroshifuu",
   "license": "MIT",
   "icon": "images/icon.png",
