@@ -87,8 +87,9 @@ const EMOJI_RE_SRC =
  * 1. If the branch name matches ticketPattern (default <type>/<ticketPrefix>-<digits>),
  *    prefix the message with "<ticketPrefix>-<digits> "
  * 2. If the current message already starts with "<ticket> ", "<emoji>:",
- *    "<type>:", "<type>(<scope>):", or "<type><emoji>:", strip the old
- *    prefix (scope included) and replace it with the selected type and emoji
+ *    "<type>:", "<type>(<scope>):", "<type>[<scope>]:", or "<type><emoji>:",
+ *    strip the old prefix (scope included) and replace it with the selected
+ *    type and emoji
  */
 function buildMessage(current, branch, selected, ticketPattern, ticketPrefix) {
   let ticket = '';
@@ -115,10 +116,10 @@ function buildMessage(current, branch, selected, ticketPattern, ticketPrefix) {
   }
 
   // Strip an existing prefix: "<type><emoji>:", a bare type word like "fix:",
-  // a scoped "<type>(<scope>):", or a bare "<emoji>:"; full-width colon
-  // supported
+  // a scoped "<type>(<scope>):" / "<type>[<scope>]:", or a bare "<emoji>:";
+  // full-width colon supported
   const prefixRe = new RegExp(
-    `^(?:[\\w-]+(?:\\([^()]*\\))?\\s*(?:${EMOJI_RE_SRC})?|${EMOJI_RE_SRC})\\s*[:：]\\s*`,
+    `^(?:[\\w-]+(?:\\([^()]*\\)|\\[[^\\[\\]]*\\])?\\s*(?:${EMOJI_RE_SRC})?|${EMOJI_RE_SRC})\\s*[:：]\\s*`,
     'u'
   );
   rest = rest.replace(prefixRe, '');

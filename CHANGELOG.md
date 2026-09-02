@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.1.1
+
+- Also recognize square-bracket scoped prefixes like `feat[extension]:` / `fix[bug]:`
+
 ## 0.1.0
 
 - Recognize scoped Conventional Commits prefixes like `feat(extension):` / `fix(bug)🐛:` and replace them with the newly selected type
